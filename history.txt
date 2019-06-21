@@ -1,0 +1,8 @@
+TODO
+
+* Remove and Clear All
+* Show message if there no found items
+* Animation when click
+* Highlite button 
+* Show Title of Gif
+
