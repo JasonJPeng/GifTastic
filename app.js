@@ -7,7 +7,7 @@ var apiKey = "453HTooEbMcLLHXzAyh12R3VvCGhpBWI";
 var myList = ["rat", "cow", "tiger", "rabbit", "dragon", "snake", "horse", "goat", "monkey", "rooster", "dog", "pig"];
 
 function displayGif(){
-    var gifURL = "http://api.giphy.com/v1/gifs/search?q=" +
+    var gifURL = "https://api.giphy.com/v1/gifs/search?q=" +
                     $(this).attr("user-data")  +
                   "&rating=g&limit=10&api_key=" + apiKey;
 
