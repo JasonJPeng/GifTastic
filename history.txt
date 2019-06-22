@@ -4,10 +4,12 @@ TODO
 (NO Need) Show message if there no found items
 (Done) Animation when click
 (Done) Highlite button 
-* Show Title of Gif
-* Don't add a button for invalid search
+ (Done) Show Title of Gif
+
+
+(Too M<uch work)  Don't add a button for invalid search
 
 ** ??? Double clcik to remove a button, but I cannot clear the image area
-
+(Double click always invoke a single click ??)
 
 

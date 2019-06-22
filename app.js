@@ -25,11 +25,22 @@ function displayGif(){
        response.data.forEach(function(e) {
           var stillGif = e.images.fixed_height_still.url;
           var animatedGif = e.images.fixed_height.url;
-          var titleGif = e.images.title;
-          $("#image-view").append($("<img>").attr("src", stillGif)
-                                            .attr("next-img", animatedGif)
-                                            .addClass("gif-img")
-                                            );
+          var titleGif = e.title;
+              titleGif = titleGif.replace("GIF", "");
+          var pFigure = $("<figure>").append($("<img>").attr("src", stillGif)
+                                                       .attr("next-img", animatedGif)
+                                                       .addClass("gif-img")                                            
+                                                       );
+          pFigure.append($("<figurecaption>").text(titleGif));
+
+          $("#image-view").append(pFigure);
+
+        //   $("#image-view").append($("<p>").text(titleGif));
+        //   $("#image-view").append($("<img>").attr("src", stillGif)
+        //                                     .attr("next-img", animatedGif)
+        //                                     .addClass("gif-img")                                            
+        //                                     );
+
        });   
     });
     
@@ -63,7 +74,8 @@ $(document).ready(function() { //  Beginning of jQuery
 
    $("#add-gif").on("click", function(event) {
       event.preventDefault();
-      myList.push($("#input-gif").val().trim());
+      var strNew = $("#input-gif").val().trim();
+      myList.push(strNew);
       $("#input-gif").val(""); // clear the search term
       addAllButtons(myList);
     }) 
@@ -76,21 +88,23 @@ $(document).ready(function() { //  Beginning of jQuery
     });
 
 
-// click a button to show all gifd
+// double click to remove a button
+$(document).on("dblclick", ".gif-select", function (event) {
+    var animalName = $(this).attr("user-data");
+    var i = myList.indexOf(animalName);
+    if (i >= 0) {
+       myList.splice(i,1); 
+       console.log(event);
+       addAllButtons(myList);
+       $("#image-view").empty();  // why this one NOT working ..????
+    }
+})   
+
+
+    // click a button to show all gifd
    $(document).on("click", ".gif-select", displayGif);
 
-// double click to remove a button
-   $(document).on("dblclick", ".gif-select", function () {
-       var animalName = $(this).attr("user-data");
-       var i = myList.indexOf(animalName);
-       if (i >= 0) {
-          myList.splice(i,1); 
-          
-          addAllButtons(myList);
-          $("#image-view").empty();  // why this one NOT working ..????
-          
-       }
-   })   
+
 
    $(document).on("click", ".gif-img", function(){
   // Swap the URL     
