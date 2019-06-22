@@ -14,4 +14,4 @@ Displaying animated gifs
 * All images are rated "G"
 
 
-![ ]screen.pgn
+![ ](screen.png)
