@@ -1,8 +1,13 @@
 TODO
 
-* Remove and Clear All
-* Show message if there no found items
-* Animation when click
-* Highlite button 
+(Done) Remove and Clear All
+(NO Need) Show message if there no found items
+(Done) Animation when click
+(Done) Highlite button 
 * Show Title of Gif
+* Don't add a button for invalid search
+
+** ??? Double clcik to remove a button, but I cannot clear the image area
+
+
 

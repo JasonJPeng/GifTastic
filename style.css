@@ -1,0 +1,15 @@
+body {
+    color: #777777;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size:20px;
+    background-color: #ffffff; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.gif-select:hover {
+   background-color: darkcyan;
+
+}

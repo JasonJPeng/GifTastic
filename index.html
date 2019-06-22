@@ -11,8 +11,18 @@
 <body>
 <div class="container-fluid">
 <div class="row">
-    <div class="col" id = "button-list">
-
+    <div class="col-9" id = "button-list">
+    </div>
+    <div class="col-3">
+            <form>
+                    Eneter an animal name:<br>
+                    <input type="text" name="animal" id="input-gif">
+                    <br><br>
+                    <input type="submit" value = "Add" id="add-gif">
+                    <input type="submit" value = "Clear All" id="clear-gif">
+                
+            </form>
+            
     </div>
 </div>
 <div class="row">
@@ -20,17 +30,14 @@
 
     </div>
     <div class="col-3" id="user-input">
-        <form>
-                Eneter an animal name:<br>
-                <input type="text" name="animal" id="input-gif">
-                <br><br>
-                <input type="submit" value = "Add" id="add-gif">
-                <input type="submit" value = "Remove" id="remove-gif">
-                <input type="submit" value = "Clear All" id="clear-gif">
-            
-        </form>
+        
         <div id="message">
-            ggggg
+                <ul>
+                        <li>Only the images rated G are listed</li>
+                        <li>Double click a button to remove the button</li>
+                        <li>Click Clear All button to clear the entire screen</li>
+                </ul>  
+            
         </div>
 
     </div>
