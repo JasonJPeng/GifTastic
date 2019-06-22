@@ -1,6 +1,8 @@
 # GifTastic
 Displaying animated gifs 
 
+[click here to try](https://jasonjpeng.github.io/GifTastic/)
+
 **Note:** All Gif files are rated "G"
 
 ## Feature:
