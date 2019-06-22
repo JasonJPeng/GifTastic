@@ -13,7 +13,7 @@ function displayGif(){
 
 // Change the color of button class gif-select 
     $(".gif-select").css("background-color", "")
-    $(this).css("background-color", "red");
+    $(this).css("background-color", "darkkhaki");
 // remove text from the input box
     
     $.ajax( {
@@ -26,12 +26,17 @@ function displayGif(){
           var stillGif = e.images.fixed_height_still.url;
           var animatedGif = e.images.fixed_height.url;
           var titleGif = e.title;
-              titleGif = titleGif.replace("GIF", "");
-          var pFigure = $("<figure>").append($("<img>").attr("src", stillGif)
+              titleGif = titleGif.replace("GIF", "").trim();
+              titleGif = "Title: " + titleGif;
+              
+          var pFigure = $('<figure>').append($("<img>").attr("src", stillGif)
                                                        .attr("next-img", animatedGif)
-                                                       .addClass("gif-img")                                            
+                                                       .addClass("gif-img figure-img img-fluid rounded")                                            
                                                        );
-          pFigure.append($("<figurecaption>").text(titleGif));
+          pFigure.append($("<figcaption>").text(titleGif).addClass("figure-caption"));
+
+          // Add BootStrap features
+          pFigure.addClass("figure");
 
           $("#image-view").append(pFigure);
 
@@ -49,7 +54,7 @@ function displayGif(){
 
 function addAButton(str) {
     // $("#button-list").append($('<button onclick="displayGif()">').text(str));
-       var btn = $("<button>");
+       var btn = $('<button type="button" class="btn-sm btn-outline-primary">');
        btn.addClass("gif-select").attr("user-data", str).text(str);
        $("#button-list").append(btn);
 }

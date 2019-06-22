@@ -15,11 +15,22 @@
     </div>
     <div class="col-3">
             <form>
-                    Eneter an animal name:<br>
+                    <!-- Eneter an animal name:<br>
                     <input type="text" name="animal" id="input-gif">
-                    <br><br>
-                    <input type="submit" value = "Add" id="add-gif">
-                    <input type="submit" value = "Clear All" id="clear-gif">
+                    <br> -->
+
+                    <div class="input-group input-group-sm mb-3">
+                            
+                            <input type="text" id="input-gif" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">
+                                - Enter an animal name to search
+                              </span>
+                          </div>  
+                    </div>
+                    
+                    <input class="btn-sm btn-primary" type="button" value = "Add" id="add-gif">
+                    <input class="btn-sm btn-primary" type="button" value = "Clear All" id="clear-gif">
                 
             </form>
             
@@ -27,16 +38,16 @@
 </div>
 <div class="row">
     <div class="col-9" id="image-view">
-        I Am who I am
+        
     </div>
     <div class="col-3" id="user-input">
         
         <div id="message">
-                <ul>
+                <ul class="list-unstyled"> <ul>
                         <li>Only the images rated G are listed</li>
                         <li>Double click a button to remove the button</li>
                         <li>Click [Clear All] button to clear the entire screen</li>
-                </ul>  
+                </ul></ul>  
             
         </div>
 
