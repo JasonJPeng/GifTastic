@@ -12,3 +12,6 @@ Displaying animated gifs
 * Title of animated Gif is desplayed
 * Click the Gif image to toggle animation feature.
 * All images are rated "G"
+
+
+![ ]screen.pgn
